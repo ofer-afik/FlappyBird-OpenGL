@@ -1,0 +1,16 @@
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  linux-building:
+    name: Linux
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup
+        uses: actions/checkout@v4          
+
+      - name: build
+        run:  \
+              cmake -S . -B build && \
+              cmake --build build
