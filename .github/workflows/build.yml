@@ -16,13 +16,12 @@ jobs:
         run:  |
               cmake -S . -B build
               cmake --build build
-        
+
       - name: upload
         uses: actions/upload-artifact@v4
         with:
           name: linux-game
           path: ./build/out
-
 
   windows-building:
     name: Windows
@@ -39,7 +38,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v4
         with:
-          name: linux-game
+          name: windows-game
           path: ./build/out
   
   macos-building:
@@ -57,5 +56,5 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v4
         with:
-          name: linux-game
+          name: macos-game
           path: ./build/out
