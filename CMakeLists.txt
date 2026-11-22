@@ -12,11 +12,18 @@ target_sources(Game
   PRIVATE
     include/include/glad.c
     src/main.cpp
+    src/code/core/game_setup.cpp
+    src/code/core/state_machine.cpp
+    src/code/core/draw_quad.cpp
+    src/code/core/shader.cpp
+    src/code/game/globals.cpp
+    src/code/game/player.cpp
 )
 
 target_include_directories(Game
   PRIVATE
     include/include/
+    src/code/
     src/
 )
 
