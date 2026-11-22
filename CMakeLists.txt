@@ -19,7 +19,7 @@ if (DEFINED ENV{GITHUB_ACTIONS})
   )
 
   FetchContent_MakeAvailable(glfw)
-  
+
 else()
   find_package(glfw3 3.3 REQUIRED)
 
@@ -33,12 +33,16 @@ target_sources(Game
   PRIVATE
     include/include/glad.c
     src/main.cpp
+
     src/code/core/game_setup.cpp
     src/code/core/state_machine.cpp
     src/code/core/draw_quad.cpp
     src/code/core/shader.cpp
+
     src/code/game/globals.cpp
     src/code/game/player.cpp
+
+    src/assets/quad_vertices.cpp
 )
 
 target_include_directories(Game
