@@ -22,7 +22,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v7
         with:
-          path: ./build/out/Game
+          path: ./build/out/**/Game
           archive: false
 
   windows-building:
@@ -40,7 +40,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v7
         with:
-          path: ./build/out/Game.exe
+          path: ./build/out/**/Game.exe
           archive: false
   
   macos-building:
@@ -58,5 +58,5 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v7
         with:
-          path: ./build/out/Game
+          path: ./build/out/**/Game
           archive: false
