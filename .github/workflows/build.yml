@@ -24,6 +24,7 @@ jobs:
         with:
           name: linux-game
           path: ./build/out
+          archive: false
 
   windows-building:
     name: Windows
@@ -42,6 +43,7 @@ jobs:
         with:
           name: windows-game
           path: ./build/out
+          archive: false
   
   macos-building:
     name: MacOS
@@ -60,3 +62,4 @@ jobs:
         with:
           name: macos-game
           path: ./build/out
+          archive: false
